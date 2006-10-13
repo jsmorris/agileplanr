@@ -1,4 +1,5 @@
 class CreateUserStories < ActiveRecord::Migration
+
   def self.up
     create_table :user_stories do |t|
       t.column :title, :string
@@ -9,4 +10,5 @@ class CreateUserStories < ActiveRecord::Migration
   def self.down
     drop_table :user_stories
   end
+
 end
