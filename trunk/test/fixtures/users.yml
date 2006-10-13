@@ -1,0 +1,12 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+chad:
+  id: 1
+  username: chad
+  password_hash: af145135b9f9268b207e7549c2a55b8d509230689ffba503d9cfabceb4156eb4
+  password_salt: qOFod/QD
+jason:
+  id: 2
+  username: jason
+  password_hash: b8cddc08941d3eb3a390a6617c64b9a6555d5e742fc0dfcf0fff62b23edc18cb
+  password_salt: 43PB4cQB
+  
