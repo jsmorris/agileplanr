@@ -1,0 +1,27 @@
+<h1>Listing iterations</h1>
+
+<table>
+  <tr>
+  <% for column in Iteration.content_columns %>
+    <th><%= column.human_name %></th>
+  <% end %>
+  </tr>
+  
+<% for iteration in @iterations %>
+  <tr>
+  <% for column in Iteration.content_columns %>
+    <td><%=h iteration.send(column.name) %></td>
+  <% end %>
+    <td><%= link_to 'Show', :action => 'show', :id => iteration %></td>
+    <td><%= link_to 'Edit', :action => 'edit', :id => iteration %></td>
+    <td><%= link_to 'Destroy', { :action => 'destroy', :id => iteration }, :confirm => 'Are you sure?', :post => true %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= link_to 'Previous page', { :page => @iteration_pages.current.previous } if @iteration_pages.current.previous %>
+<%= link_to 'Next page', { :page => @iteration_pages.current.next } if @iteration_pages.current.next %> 
+
+<br />
+
+<%= link_to 'New iteration', :action => 'new' %>

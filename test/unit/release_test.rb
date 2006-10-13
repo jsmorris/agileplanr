@@ -13,6 +13,7 @@ class ReleaseTest < Test::Unit::TestCase
     assert_equal 1, @release.id
     assert_equal "Alpha", @release.name
     assert_equal @project, @release.project
+    assert_equal 2, @release.iterations.count
   end
   
   def test_update
