@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+task_A:
+  id: 1
+  title: Task A
+  description: This is the first Task
+  user_story_id: 1
+task_B:
+  id: 2
+  title: Task B
+  description: This is the second Task
+  user_story_id: 1
