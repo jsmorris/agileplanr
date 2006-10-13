@@ -14,6 +14,7 @@ class UserStoryTest < Test::Unit::TestCase
     assert_equal "User Story 1", @user_story.title
     assert_equal "This is the first User Story", @user_story.description
     assert_equal @iteration, @user_story.iteration
+    assert_equal 2, @user_story.tasks.count
   end
   
   def test_update
