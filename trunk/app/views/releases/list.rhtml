@@ -1,0 +1,27 @@
+<h1>Listing releases</h1>
+
+<table>
+  <tr>
+  <% for column in Release.content_columns %>
+    <th><%= column.human_name %></th>
+  <% end %>
+  </tr>
+  
+<% for release in @releases %>
+  <tr>
+  <% for column in Release.content_columns %>
+    <td><%=h release.send(column.name) %></td>
+  <% end %>
+    <td><%= link_to 'Show', :action => 'show', :id => release %></td>
+    <td><%= link_to 'Edit', :action => 'edit', :id => release %></td>
+    <td><%= link_to 'Destroy', { :action => 'destroy', :id => release }, :confirm => 'Are you sure?', :post => true %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= link_to 'Previous page', { :page => @release_pages.current.previous } if @release_pages.current.previous %>
+<%= link_to 'Next page', { :page => @release_pages.current.next } if @release_pages.current.next %> 
+
+<br />
+
+<%= link_to 'New release', :action => 'new' %>
