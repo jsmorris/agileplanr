@@ -1,9 +1,0 @@
-# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
-alpha:
-  id: 1
-  name: "Alpha"
-  project_id: 1
-beta:
-  id: 2
-  name: "Beta"
-  project_id: 1

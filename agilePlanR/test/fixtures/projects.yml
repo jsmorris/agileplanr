@@ -1,8 +1,0 @@
-# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
-indicators_project:
-  id: 1
-  name: Indicators
-ems_project:
-  id: 2
-  name: EMS
-  

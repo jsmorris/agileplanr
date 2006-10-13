@@ -1,9 +1,0 @@
-# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
-user_story_1:
-  id: 1
-  title: User Story 1
-  description: This is the first User Story
-user_story_2:
-  id: 2
-  title: User Story 2
-  description: This is the second User Story
