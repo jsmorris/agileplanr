@@ -3,7 +3,9 @@ user_story_1:
   id: 1
   title: User Story 1
   description: This is the first User Story
+  iteration_id: 1
 user_story_2:
   id: 2
   title: User Story 2
   description: This is the second User Story
+  iteration_id: 1

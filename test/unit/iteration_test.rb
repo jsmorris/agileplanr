@@ -13,6 +13,7 @@ class IterationTest < Test::Unit::TestCase
     assert_equal 1, @iteration.id
     assert_equal "Alpha 1", @iteration.name
     assert_equal @release, @iteration.release
+    assert_equal 2, @iteration.user_stories.count
   end
   
   def test_update

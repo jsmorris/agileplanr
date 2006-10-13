@@ -5,6 +5,7 @@ class UserStoryTest < Test::Unit::TestCase
 
   def setup
     @user_story = UserStory.find(1)
+    @iteration = Iteration.find(1)
   end
 
   def test_create
@@ -12,6 +13,7 @@ class UserStoryTest < Test::Unit::TestCase
     assert_equal 1, @user_story.id
     assert_equal "User Story 1", @user_story.title
     assert_equal "This is the first User Story", @user_story.description
+    assert_equal @iteration, @user_story.iteration
   end
   
   def test_update
