@@ -25,4 +25,12 @@ class Test::Unit::TestCase
   self.use_instantiated_fixtures  = false
 
   # Add more helper methods to be used by all tests here...
+  def signin(name='chad', password='secret')
+    post :signin, :user => {:name => name, :password => password}
+    assert_redirected_to :action => "index"
+    assert_not_nil(session[:user_id])
+    user = User.find(session[:user_id])
+    assert_equal name, user.name, "Signin name should match session name"
+  end
+  
 end
