@@ -1,14 +1,16 @@
-<html>
-    <head>
-        <title>Signin for Admin Access</title>
-    </head>
-    <body>
-        <%= start_form_tag :action => "signin" %>
-          <label for="username">Username:</label>
-          <%= text_field_tag "username" %><br />
-          <label for="password">Password:</lable>
-          <%= password_field_tag "password" %><br />
-          <%= submit_tag "Sign in" %>
-        <%= end_form_tag %>
-    </body>
-</html>
+<%= start_form_tag :action => "signin" %>
+<table>
+  <tr>
+    <td align="right"><label for="username">Username:</label></td>
+    <td><%= text_field_tag "username" %></td>
+  </tr>
+  <tr>
+    <td align="right"><label for="password">Password:</label></td>
+    <td><%= password_field_tag "password" %></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><%= submit_tag "Sign in" %></td>
+  </tr>
+</table>
+<%= end_form_tag %>

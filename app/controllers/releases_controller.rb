@@ -1,4 +1,5 @@
 class ReleasesController < ApplicationController
+
   def index
     list
     render :action => 'list'
