@@ -1,3 +1,59 @@
+#banner {
+  background: #9c9;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid;
+  font: small-caps 40px/40px "Times New Roman", serif;
+  color: #282;
+  text-align: center;
+}
+
+#banner img {
+  float: left;
+}
+
+#columns {
+  background: #141;
+}
+
+#main {
+  margin-left: 7em;
+  padding-top: 4ex;
+  padding-left: 2em;
+  background: white;
+}
+
+#side {
+  float: left;
+  padding-top: 1em;
+  padding-left: 1em;
+  padding-bottom: 1em;
+  width: 6em;
+  background: #141;
+}
+
+#notice {
+  border: 2px solid red;
+  padding: 1em;
+  margin-bottom: 2em;
+  background-color: #f0f0f0;
+  font: bold smaller sans-serif;
+}
+
+a {
+  text-decoration: none;
+  font: smaller sans-serif;
+}
+
+#side a {
+  color: #ada;
+  font: smaller sans-serif;
+}
+
+#side a:hover {
+  color: #fff;
+}
+
 body { background-color: #fff; color: #333; }
 
 body, p, ol, ul, td {

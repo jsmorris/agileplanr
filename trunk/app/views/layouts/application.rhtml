@@ -1,5 +1,28 @@
-<% if flash[:notice] %>
-  <div class="errors">
-    <%= flash[:ntoice] %>
-  </div>
-<% end %>
+<html>
+    <head>
+        <title>agile PlanR: <%= controller.controller_name.capitalize %> <%= controller.action_name.capitalize %></title>
+        <%= stylesheet_link_tag "scaffold", :media => "all" %>
+    </head>
+    <body>
+        <div id="banner">
+            <!-- img src="/images/logo.png" / -->
+            <%= @page_title || "agile PlanR" %>
+        </div>
+        <div id="columns">
+            <div id="side">
+                <a href="/">Home</a><br />
+                <hr />
+                <a href="/faq">FAQ</a><br />
+                <a href="/help">Help</a><br />
+            </div>
+        </div>
+        <div id="main">
+            <% if @flash[:notice] -%>
+                <div id="notice">
+                    <%= @flash[:notice] %>
+                </div>
+            <% end -%>
+            <%= yield  %>           
+        </div>
+    </body>
+</html>
