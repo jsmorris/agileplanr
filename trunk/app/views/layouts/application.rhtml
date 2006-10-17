@@ -10,6 +10,12 @@
         </div>
         <div id="columns">
             <div id="side">
+                <% if session[:user] -%>
+                <%= link_to("Sign out", :controller => "admin", :action => "signout") -%>
+                <% else -%>
+                <%= link_to("Sign in", :controller => "admin", :action => "signin") -%>
+                <% end -%>
+                <br />
                 <a href="/">Home</a><br />
                 <hr />
                 <a href="/faq">FAQ</a><br />

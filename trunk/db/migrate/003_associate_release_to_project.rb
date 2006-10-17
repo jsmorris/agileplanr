@@ -5,7 +5,7 @@ class AssociateReleaseToProject < ActiveRecord::Migration
   end
 
   def self.down
-    remove_column :release, :project_id
+    remove_column :releases, :project_id
   end
 
 end

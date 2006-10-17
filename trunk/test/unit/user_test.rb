@@ -18,8 +18,10 @@ class UserTest < Test::Unit::TestCase
   end
   
   def test_uniqueness
-    assert_raise(Exception) { chad = User.create(:username => "chad") 
-                              chad.save }
+    user = User.create(:username => "chad") 
+    user.save    
+    assert_equal(1, user.errors.count)
+    assert_equal("has already been taken", user.errors[:username])
   end
 
 end
