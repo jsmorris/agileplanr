@@ -13,6 +13,7 @@ class AdminController < ApplicationController
   
   def signout
     session[:user] = nil
+    flash[:notice] = "Signed out"
     redirect_to home_url
   end
   

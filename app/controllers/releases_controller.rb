@@ -1,5 +1,4 @@
 class ReleasesController < ApplicationController
-
   def index
     list
     render :action => 'list'
@@ -22,7 +21,11 @@ class ReleasesController < ApplicationController
   end
 
   def create
-    @release = Release.new(params[:release])
+    @release = Release.new(:name => params[:release][:name],
+                           :start_at => params[:release][:start_at],
+                           :end_at => params[:release][:end_at],
+                           :project => Project.find(params[:release][:project]) )
+    raise @release.inspect
     if @release.save
       flash[:notice] = 'Release was successfully created.'
       redirect_to :action => 'list'

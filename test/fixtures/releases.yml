@@ -2,8 +2,12 @@
 alpha:
   id: 1
   name: "Alpha"
+  start_at: "2006-10-16"
+  end_at: "2006-10-23"
   project_id: 1
 beta:
   id: 2
   name: "Beta"
+  start_at: "2006-10-24"
+  end_at: "2006-10-31"
   project_id: 1

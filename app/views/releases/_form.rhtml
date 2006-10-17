@@ -3,5 +3,14 @@
 <!--[form:release]-->
 <p><label for="release_name">Name</label><br/>
 <%= text_field 'release', 'name'  %></p>
+
+<p><label for="release_project">Project</label><br/>
+<%= select 'release', 'project', Project.find(:all, :order => "name").map {|u| [u.name, u.id]} %></p>
+
+<p><label for="release_start_at">Start at</label><br/>
+<%= date_select 'release', 'start_at'  %></p>
+
+<p><label for="release_end_at">End at</label><br/>
+<%= date_select 'release', 'end_at'  %></p>
 <!--[eoform:release]-->
 

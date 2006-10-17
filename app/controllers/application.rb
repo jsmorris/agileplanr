@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
 
   before_filter :check_authentication,
                 :check_authorization,
-                :except => [:signin]
+                :except => [:signin, :signout]
   
   def check_authentication
     unless session[:user]

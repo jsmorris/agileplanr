@@ -9,14 +9,25 @@ class AssignRightsToRoles < ActiveRecord::Migration
     role.rights << Right.find(:first, :conditions => [ "name = ?", "Edit Project" ])
     role.rights << Right.find(:first, :conditions => [ "name = ?", "Destroy Project" ])
     role.rights << Right.find(:first, :conditions => [ "name = ?", "List Projects" ])
+    role.rights << Right.find(:first, :conditions => [ "name = ?", "Index Projects" ])
     role.rights << Right.find(:first, :conditions => [ "name = ?", "Show Project" ])
     
+    # Release rights
+    role.rights << Right.find(:first, :conditions => [ "name = ?", "New Release" ])
+    role.rights << Right.find(:first, :conditions => [ "name = ?", "Create Release" ])
+    role.rights << Right.find(:first, :conditions => [ "name = ?", "Edit Release" ])
+    role.rights << Right.find(:first, :conditions => [ "name = ?", "Destroy Release" ])
+    role.rights << Right.find(:first, :conditions => [ "name = ?", "List Releases" ])
+    role.rights << Right.find(:first, :conditions => [ "name = ?", "Index Releases" ])
+    role.rights << Right.find(:first, :conditions => [ "name = ?", "Show Release" ])
+
     # Iteration rights
     role.rights << Right.find(:first, :conditions => [ "name = ?", "New Iteration" ])
     role.rights << Right.find(:first, :conditions => [ "name = ?", "Create Iteration" ])
     role.rights << Right.find(:first, :conditions => [ "name = ?", "Edit Iteration" ])
     role.rights << Right.find(:first, :conditions => [ "name = ?", "Destroy Iteration" ])
     role.rights << Right.find(:first, :conditions => [ "name = ?", "List Iterations" ])
+    role.rights << Right.find(:first, :conditions => [ "name = ?", "Index Iterations" ])
     role.rights << Right.find(:first, :conditions => [ "name = ?", "Show Iteration" ])
 
     role.save

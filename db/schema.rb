@@ -15,6 +15,8 @@ ActiveRecord::Schema.define(:version => 17) do
 
   create_table "releases", :force => true do |t|
     t.column "name", :string
+    t.column "start_at", :date
+    t.column "end_at", :date
     t.column "project_id", :integer
   end
 
