@@ -1,8 +1,13 @@
-<h1>New project</h1>
+<h1>Start a new project</h1>
 
 <%= start_form_tag :action => 'create' %>
-  <%= render :partial => 'form' %>
-  <%= submit_tag "Create" %>
+<p>
+  The <%= text_field :project, :name %> project starts on <%= date_select :question, :start_at %> with 
+  <%= select :question, :num_of_releases, 1..9 %> release(s) and each release has 
+  <%= select :question, :num_of_iterations, 1..9 %> iterations(s) of length 
+  <%= select :question, :iteration_length, 1..4 %> week(s).
+</p>
+<%= submit_tag "Create" %>
 <%= end_form_tag %>
 
 <%= link_to 'Back', :action => 'list' %>

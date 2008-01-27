@@ -1,5 +1,22 @@
 <%= error_messages_for 'user_story' %>
 
 <!--[form:user_story]-->
+<p>
+  <label for="user_story_title">Title</label>
+  <br/>
+  <%= text_field 'user_story', 'title'  %>
+  <br/>
+  <label for="user_story_description">Description</label>
+  <br/>
+  <%= text_field 'user_story', 'description'  %>
+  <br/>
+  <label for="user_story_title">Developers</label>
+  <br/>
+  <%= 
+    @users = User.find(:all, :order => "username")
+    collection_select(:user, :username, @users, :id, :username)
+  %>
+  <br/>
+</p>
 <!--[eoform:user_story]-->
 

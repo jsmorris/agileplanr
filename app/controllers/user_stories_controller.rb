@@ -43,7 +43,15 @@ class UserStoriesController < ApplicationController
       render :action => 'edit'
     end
   end
-
+  
+  def update_description
+    user_story = UserStory.find(params[:id])
+    user_story.description = params[:value]
+    user_story.save
+    user_story.reload
+    render_text(user_story.description)
+  end
+  
   def destroy
     UserStory.find(params[:id]).destroy
     redirect_to :action => 'list'

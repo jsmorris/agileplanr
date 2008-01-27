@@ -30,6 +30,16 @@ class AssignRightsToRoles < ActiveRecord::Migration
     role.rights << Right.find(:first, :conditions => [ "name = ?", "Index Iterations" ])
     role.rights << Right.find(:first, :conditions => [ "name = ?", "Show Iteration" ])
 
+    # User Story rights
+    role.rights << Right.find(:first, :conditions => [ "name = ?", "New User Story" ])
+    role.rights << Right.find(:first, :conditions => [ "name = ?", "Create User Story" ])
+    role.rights << Right.find(:first, :conditions => [ "name = ?", "Edit User Story" ])
+    role.rights << Right.find(:first, :conditions => [ "name = ?", "Destroy User Story" ])
+    role.rights << Right.find(:first, :conditions => [ "name = ?", "List User Stories" ])
+    role.rights << Right.find(:first, :conditions => [ "name = ?", "Index User Stories" ])
+    role.rights << Right.find(:first, :conditions => [ "name = ?", "Show User Story" ])
+    role.rights << Right.find(:first, :conditions => [ "name = ?", "Edit User Story Description" ])
+
     role.save
   end
 
