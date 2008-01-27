@@ -128,3 +128,17 @@ div.progressBar div.background {
   width: 0%;
 }
 
+div.userstory {
+  width: 450px;
+  border: 2px #BAFB80;
+  margin: 0 auto;
+}
+
+div.header {
+  padding: 2px 0;
+  background: #BAFB80
+}
+
+div.content {
+  padding: 5px 0;
+}

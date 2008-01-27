@@ -1,7 +1,7 @@
 require File.dirname(__FILE__) + '/../test_helper'
 
 class UserStoryTest < Test::Unit::TestCase
-  fixtures :user_stories
+  fixtures :user_stories, :users
 
   def setup
     @user_story = UserStory.find(1)
@@ -30,6 +30,14 @@ class UserStoryTest < Test::Unit::TestCase
   def test_destroy
     @user_story.destroy
     assert_raise(ActiveRecord::RecordNotFound) { UserStory.find(@user_story.id)}
+  end
+  
+  def test_add_developers
+    @user_story.developers << User.find(1)
+    @user_story.developers << User.find(2)
+    @user_story.save
+    
+    assert_equal 2, @user_story.developers.count
   end
 
 end

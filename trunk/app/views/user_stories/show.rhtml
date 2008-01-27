@@ -1,8 +1,4 @@
-<% for column in UserStory.content_columns %>
-<p>
-  <b><%= column.human_name %>:</b> <%=h @user_story.send(column.name) %>
-</p>
-<% end %>
+<%= render(:partial => "user_story") %>
 
 <%= link_to 'Edit', :action => 'edit', :id => @user_story %> |
 <%= link_to 'Back', :action => 'list' %>

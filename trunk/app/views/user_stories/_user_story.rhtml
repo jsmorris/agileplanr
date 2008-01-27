@@ -1,0 +1,22 @@
+<div class="userstory">
+  <div class="header" id="title">
+    <%= editable_content(:content => { :element => 'div',
+                                       :text => user_story.title,
+                                       :options => { :id => "user_story_title_#{user_story.id}", 
+                                                     :class => 'editable-content' } },
+                         :url => { :controller => 'user_stories', :action => 'update_title', :id => user_story.id } ) %>
+    [-][+]  
+  </div>
+  <%= editable_content(:content => { :element => 'div',
+                                     :text => user_story.description,
+                                     :options => { :id => "user_story_desc_#{user_story.id}", 
+                                                   :class => 'editable-content' } },
+                       :url => { :controller => 'user_stories', :action => 'update_description', :id => user_story.id } ) %>
+  <br />
+  <%= link_to 'more...', :action => 'show', :id => user_story %>
+  <div>developers: 
+    <% for user in user_story.developers %>
+      <%= link_to 'add', :action => 'show', :id => user_story %>
+    <% end %>
+  </div>
+</div>

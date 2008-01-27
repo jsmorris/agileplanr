@@ -27,6 +27,17 @@ class AddRights < ActiveRecord::Migration
     Right.create(:name => "List Iterations", :controller => "iterations", :action => "list")
     Right.create(:name => "Index Iterations", :controller => "iterations", :action => "index")
     Right.create(:name => "Show Iteration", :controller => "iterations", :action => "show")
+
+    # User Story rights
+    Right.create(:name => "New User Story", :controller => "user_stories", :action => "new")
+    Right.create(:name => "Create User Story", :controller => "user_stories", :action => "create")
+    Right.create(:name => "Edit User Story", :controller => "user_stories", :action => "edit")
+    Right.create(:name => "Destroy User Story", :controller => "user_stories", :action => "destroy")
+    Right.create(:name => "List User Stories", :controller => "user_stories", :action => "list")
+    Right.create(:name => "Index User Stories", :controller => "user_stories", :action => "index")
+    Right.create(:name => "Show User Story", :controller => "user_stories", :action => "show")
+    Right.create(:name => "Edit User Story Description", :controller => "user_stories", :action => "update_description")    
+    
   end
 
   def self.down
@@ -56,6 +67,16 @@ class AddRights < ActiveRecord::Migration
     Right.delete(Right.find(:first, :conditions => [ "name = ?", "List Iterations" ]).id)
     Right.delete(Right.find(:first, :conditions => [ "name = ?", "Index Iterations" ]).id)
     Right.delete(Right.find(:first, :conditions => [ "name = ?", "Show Iteration" ]).id)
+
+    # User Story rights
+    Right.delete(Right.find(:first, :conditions => [ "name = ?", "New User Story" ]).id)
+    Right.delete(Right.find(:first, :conditions => [ "name = ?", "Create User Story" ]).id)
+    Right.delete(Right.find(:first, :conditions => [ "name = ?", "Edit User Story" ]).id)
+    Right.delete(Right.find(:first, :conditions => [ "name = ?", "Destroy User Story" ]).id)
+    Right.delete(Right.find(:first, :conditions => [ "name = ?", "List User Stories" ]).id)
+    Right.delete(Right.find(:first, :conditions => [ "name = ?", "Index User Stories" ]).id)
+    Right.delete(Right.find(:first, :conditions => [ "name = ?", "Show User Story" ]).id)
+    Right.delete(Right.find(:first, :conditions => [ "name = ?", "Edit User Story Description" ]).id)    
   end
   
 end
